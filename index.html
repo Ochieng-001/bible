@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblical Verse Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Biblical Verse Search</h1>
+        <div class="search-box">
+            <select id="bookSelect">
+                <!-- Options for the 66 books of the Bible will be added here -->
+            </select>
+            <input type="number" id="chapterInput" placeholder="Chapter" min="1"><br><br>
+            <input type="number" id="verseStartInput" placeholder="Start Verse" min="1">
+            <input type="number" id="verseEndInput" placeholder="End Verse" min="1">
+            <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+        <div id="verseDisplay" class="verse-display"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="verseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
